@@ -1,5 +1,5 @@
 <h1>Agregar Clientes</h1>
-<form action="<?php echo site_url('clientes/crear'); ?>" method="post">
+<form action="<?php echo site_url('Clientes/crear'); ?>" method="post">
     <div>
 
     <label for="nit">NIT:</label>
@@ -38,8 +38,8 @@
 
    <div>
 
-   <label for="direcion">Direcion</label>
-   <input type="text" name="direcion" required>
+   <label for="direccion">Direccion</label>
+   <input type="text" name="direccion" required>
 
 
    </div><br>

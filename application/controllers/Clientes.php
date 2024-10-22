@@ -19,9 +19,9 @@ class Clientes extends CI_Controller {
                 'nit' => $this->input->post('nit'),
                 'dpi' => $this->input->post('dpi'),
                 'nombre' => $this->input->post('nombre'),
-                'apelldio' => $this->input->post('apellido'),
+                'apellido' => $this->input->post('apellido'),
                 'apellido_casada' => $this->input->post('apellido_casada'),
-                'direcion' => $this->input->post('direcion'),
+                'direccion' => $this->input->post('direccion'),
                 'correo_electronico' => $this->input->post('correo_electronico'),
                 'nacionalidad' =>$this->input->post('nacionalidad'),
                 'numero_telefonico' =>$this->input->post('numero_telefonico')
@@ -34,36 +34,29 @@ class Clientes extends CI_Controller {
     }
 
     public function editar($id) {
-        $data['clientes'] = $this->Clientes_model->obtener_clientes($id);
+        $data['clientes'] = $this->Clientes_model->obtener_cliente($id);
         
         if ($this->input->post()) {
             $dataUpdate = array(
-              
                 'nit' => $this->input->post('nit'),
                 'dpi' => $this->input->post('dpi'),
                 'nombre' => $this->input->post('nombre'),
-                'apelldio' => $this->input->post('apellido'),
+                'apellido' => $this->input->post('apellido'),
                 'apellido_casada' => $this->input->post('apellido_casada'),
-                'direcion' => $this->input->post('direcion'),
+                ' direccion ' => $this->input->post('direccion'),
                 'correo_electronico' => $this->input->post('correo_electronico'),
                 'nacionalidad' =>$this->input->post('nacionalidad'),
                 'numero_telefonico' =>$this->input->post('numero_telefonico')
-                
-
-
-
-
-                
             );
             $this->Clientes_model->actualizar_clientes($id, $dataUpdate);
             redirect('clientes');
         }
         
-        $this->load->view('clientes/editar', $data);
+        $this->load->view('Clientes/editar', $data);
     }
 
     public function eliminar($id) {
         $this->Clientes_model->eliminar_clientes($id);
-        redirect('clientes');
+        redirect('Clientes');
     }
 }

@@ -1,5 +1,5 @@
 <h1>Cliente</h1>
-<form action="<?php echo site_url('clientes/editar/' . $clientes->id); ?>" method="post">
+<form action="<?php echo site_url('Clientes/editar/' . $clientes->id); ?>" method="post">
     <label for="nit">nit:</label>
     <input type="text" name="nit" value="<?php echo $clientes->nit; ?>" required>
 
@@ -18,8 +18,8 @@
     <label for="apellido_casada">apellido_casada:</label>
     <input type="text" name="apellido_casada" value="<?php echo $clientes->apellido_casada; ?>" required>
 
-    <label for="direcion">direcion:</label>
-    <input type="text" name="direcion" value="<?php echo $clientes->direcion; ?>" required>
+    <label for="direccion">direccion:</label>
+    <input type="text" name="direccion" value="<?php echo $clientes->direccion; ?>" required>
 
 
 
